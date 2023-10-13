@@ -1,8 +1,9 @@
 FROM debian:12
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget libncurses-dev build-essential bc kmod cpio flex libncurses5-dev libelf-dev libssl-dev dwarves bison
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget \
+    libncurses-dev build-essential bc kmod cpio flex libncurses5-dev \
+    libelf-dev libssl-dev dwarves bison python3-minimal python-is-python3
 
 RUN mkdir /toolchain /WORKDIR
-
 WORKDIR /toolchain
 # clang
 RUN wget "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r498229b.tar.gz" -O clang.tar.gz
