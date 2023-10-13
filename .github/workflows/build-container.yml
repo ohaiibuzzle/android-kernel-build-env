@@ -7,6 +7,9 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  packages: write
+
 jobs:
   build-push-container:
     name: Build and push Docker Image
