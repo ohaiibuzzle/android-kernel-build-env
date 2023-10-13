@@ -1,5 +1,5 @@
 FROM debian:12
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget libncurses-dev build-essential
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget libncurses-dev build-essential bc
 
 RUN mkdir /toolchain /WORKDIR
 
