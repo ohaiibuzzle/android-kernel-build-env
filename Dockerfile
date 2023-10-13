@@ -1,5 +1,5 @@
 FROM debian:12
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget libncurses-dev build-essential bc
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git wget libncurses-dev build-essential bc kmod cpio flex libncurses5-dev libelf-dev libssl-dev dwarves bison
 
 RUN mkdir /toolchain /WORKDIR
 
